@@ -1,8 +1,9 @@
 :root {
-  --branding-color: #272142;
+  --branding-color: #82aaff;
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "poppins" sans-serif;
   --secondary-color: #f9f7fe;
+  --accent-color: #272044;
 }
 
 body {
@@ -29,6 +30,10 @@ h2 {
   font-size: 64px;
 }
 
+h4 {
+  font-size: 48px;
+}
+
 p {
   font-weight: normal;
   font-size: 16px;
@@ -46,7 +51,7 @@ p {
   font-family: var(--default-font-family);
   font-weight: normal;
   line-height: 1.5;
-  color: var(--branding-color);
+  color: var(--accent-color);
 }
 
 .content-container {
@@ -78,7 +83,7 @@ p {
 }
 
 .btn-branding {
-  background-color: var(--branding-color);
+  background-color: var(--accent-color);
   color: white;
   border-radius: 4px;
   font-size: 18px;
@@ -87,8 +92,8 @@ p {
 }
 
 .btn-branding-outline {
-  color: var(--branding-color);
-  border: 1px solid var(--branding-color);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
   border-radius: 4px;
   font-size: 18px;
   line-height: 27px;
@@ -126,13 +131,52 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: var(--branding-color);
+  color: var(--accent-color);
   transition: all 100ms ease-in-out;
 }
 
 nav a:hover,
 nav li.active a {
-  color: #6c63ff;
+  color: var(--branding-color);
+}
+
+footer .email-link {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+footer {
+  margin: 60px 0;
+}
+
+footer .contact-box {
+  background: var(--secondary-color);
+  padding: 30px 120px;
+  border-radius: 10px;
+}
+
+footer .contact-box p {
+  margin: 0;
+}
+
+footer .email-link:hover {
+  color: var(--branding-color);
+}
+
+footer .social-links a {
+  margin: 0 20px;
+  color: var(--branding-color);
+  background-color: var(--secondary-color);
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 100ms ease-in-out;
+}
+
+footer .social-links a:hover {
+  color: white;
+  background-color: var(--branding-color);
 }
 
 @media (max-width: 900px) {
@@ -143,10 +187,15 @@ nav li.active a {
   h2 {
     font-size: 44px;
   }
+  h4 {
+    font-size: 26px;
+  }
+
   .project-description {
     padding: 0;
     text-align: center;
   }
+
   .hero {
     padding: 80px 20px;
   }
